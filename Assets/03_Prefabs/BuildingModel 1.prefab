@@ -33,6 +33,19 @@ Transform:
   - {fileID: 625346710189832208}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5985146186147403593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548568706699181710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45f1e7e1f158451d8dd92fd4fe1dec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingModel
+  wrapper: {fileID: 625346710189832208}
 --- !u!1 &5438611752938969060
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,7 +113,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0752612a10a1240be8d13f0f957a12b3, type: 2}
+  - {fileID: 2100000, guid: 8df1c6640a0e441b7803391c951fe180, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -445,16 +458,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3916571458311953522, guid: a39cf21c9f77344cea545c2f5ec60ae7, type: 3}
   m_PrefabInstance: {fileID: 7081214592937300847}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5985146186147403593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2548568706699181710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b45f1e7e1f158451d8dd92fd4fe1dec0, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::BuildingModel
-  wrapper: {fileID: 625346710189832208}

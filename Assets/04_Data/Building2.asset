@@ -15,3 +15,5 @@ MonoBehaviour:
   <Description>k__BackingField: This is building2
   <Cost>k__BackingField: 0
   <Model>k__BackingField: {fileID: -191178230687991571, guid: 1728f9e7573f44254a248cdd469553fb, type: 3}
+  <ProductionAmount>k__BackingField: 20
+  <ProductionInterval>k__BackingField: 1

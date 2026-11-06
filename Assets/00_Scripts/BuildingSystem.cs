@@ -14,6 +14,10 @@ public class BuildingSystem : MonoBehaviour
     [SerializeField] private BuildingGrid grid;
 
     private BuildingPreview preview;
+    private int lastPlacementEndFrame = -1;
+
+    public bool isPlacing =>
+        preview != null || lastPlacementEndFrame == Time.frameCount;
 
     private void Update()
     {
@@ -105,9 +109,11 @@ public class BuildingSystem : MonoBehaviour
     private void CancelPreview()
     {
         if (preview == null) return;
+        lastPlacementEndFrame = Time.frameCount;
         preview.gameObject.SetActive(false);
         Destroy(preview.gameObject);
         preview = null;
+        
     }
 
     private void OnDisable()

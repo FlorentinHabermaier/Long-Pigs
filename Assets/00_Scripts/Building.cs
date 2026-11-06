@@ -4,6 +4,8 @@ public class Building : MonoBehaviour
 {
     public string Description => data.Description;
     public int Cost => data.Cost;
+
+    public int Level {get; private set;} = 1;
     
     private BuildingModel model;
     private BuildingData data;
@@ -14,6 +16,30 @@ public class Building : MonoBehaviour
         this.data = data;
         model = Instantiate(data.Model, transform.position, Quaternion.identity, transform);
         model.SetRotation(rotation);
+    }
+
+    public Vector3 GetUIAnchorPosition()
+    {
+        if (model == null)
+            return transform.position;
+
+        Renderer[] renderers = model.GetComponentsInChildren<Renderer>();
+
+        if (renderers.Length == 0)
+            return transform.position;
+
+        Bounds bounds = renderers[0].bounds;
+
+        foreach (Renderer renderer in renderers)
+        {
+            bounds.Encapsulate(renderer.bounds);
+        }
+
+        return new Vector3(
+            bounds.center.x,
+            bounds.max.y,
+            bounds.center.z
+        );
     }
 
     private void Update()
